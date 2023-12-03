@@ -21,6 +21,20 @@ public class Option_20677670_SaavedraOlmos {
     public int getCode() {
         return code;
     }
+    
+    public static List<Option_20677670_SaavedraOlmos> removeDuplicateOptions(List<Option_20677670_SaavedraOlmos> options){
+    	List<Option_20677670_SaavedraOlmos> listOptions = new ArrayList<>();
+    	List<Integer> codes = new ArrayList<>();
+    	
+    	for(Option_20677670_SaavedraOlmos op: options){
+    	    if(!codes.contains(op.getCode())){
+    	    	codes.add(op.getCode());
+    	    	listOptions.add(op);
+    	    }
+    	}
+    	
+    	return listOptions;
+    }
 
     @Override
     public String toString() {
