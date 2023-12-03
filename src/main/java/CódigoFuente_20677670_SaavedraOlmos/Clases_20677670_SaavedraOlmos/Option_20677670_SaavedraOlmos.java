@@ -21,4 +21,15 @@ public class Option_20677670_SaavedraOlmos {
     public int getCode() {
         return code;
     }
+
+    @Override
+    public String toString() {
+        return "[" +
+                code +
+                message +
+                chatbotCodeLink +
+                initialFlowCodeLink +
+                keywords +
+                ']';
+    }
 }
