@@ -1,6 +1,6 @@
 package CódigoFuente_20677670_SaavedraOlmos.Clases_20677670_SaavedraOlmos;
 
-import java.util.List;
+import java.util.*;
 import CódigoFuente_20677670_SaavedraOlmos.Clases_20677670_SaavedraOlmos.Option_20677670_SaavedraOlmos;
 
 public class Flow_20677670_SaavedraOlmos {
@@ -22,7 +22,7 @@ public class Flow_20677670_SaavedraOlmos {
     public void flowAddOption(Option_20677670_SaavedraOlmos newOption) {
     	boolean optionExists = false; 
     	
-        for(Option op: options){
+        for(Option_20677670_SaavedraOlmos op: options){
            if(op.getCode() == newOption.getCode()){
            	optionExists = true; 
            	break; 
@@ -35,7 +35,7 @@ public class Flow_20677670_SaavedraOlmos {
         
     }
     
-    public static List<Flow> removeDuplicateFlows(List<Flow_20677670_SaavedraOlmos> flows){
+    public static List<Flow_20677670_SaavedraOlmos> removeDuplicateFlows(List<Flow_20677670_SaavedraOlmos> flows){
     	List<Flow_20677670_SaavedraOlmos> listFlows = new ArrayList<>();
     	List<Integer> idFlows = new ArrayList<>();
     	

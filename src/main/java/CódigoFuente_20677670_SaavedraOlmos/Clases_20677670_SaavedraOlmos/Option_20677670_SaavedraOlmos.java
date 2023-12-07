@@ -1,6 +1,6 @@
 package CódigoFuente_20677670_SaavedraOlmos.Clases_20677670_SaavedraOlmos;
 
-import java.util.List;
+import java.util.*;
 
 public class Option_20677670_SaavedraOlmos {
     private int code;

@@ -40,7 +40,7 @@ public class Chatbot_20677670_SaavedraOlmos {
     	List<Chatbot_20677670_SaavedraOlmos> listChatbots = new ArrayList<>();
     	List<Integer> idChatbots = new ArrayList<>();
     	
-    	for(Chatbot cbt: chatbots){
+    	for(Chatbot_20677670_SaavedraOlmos cbt: chatbots){
     	   if(!idChatbots.contains(cbt.getChatbotID())){
     	   	idChatbots.add(cbt.getChatbotID());
     	   	listChatbots.add(cbt);
