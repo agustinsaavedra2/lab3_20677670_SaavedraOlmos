@@ -38,5 +38,18 @@ public class SystemChatbot_20677670_SaavedraOlmos{
     	   chatbots.add(newChatbot);
     	}
     }
+    
+    public void systemAddUser(User_20677670_SaavedraOlmos newUser){
+    	
+    	if(!systemUsers.contains(newUser.getName())){
+    	    systemUsers.add(newUser.getName());
+    	}
+    }
+    
+    public void systemLogin(String user){
+    	if(systemUsers.contains(user) && loggedUser.size() < 1){
+    	   loggedUser.add(user);
+    	}
+    }
 
 }
