@@ -51,5 +51,18 @@ public class SystemChatbot_20677670_SaavedraOlmos{
     	   loggedUser.add(user);
     	}
     }
+    
+    public void systemLogout(){
+    	loggedUser.clear();
+    }
+
+    @Override
+    public String toString() {
+        return "[" +
+                name + 
+                "," + initialChatbotCodeLink +
+                "," + chatbots + "," + systemUsers +
+                "," + loggedUser + ']';
+    }
 
 }
