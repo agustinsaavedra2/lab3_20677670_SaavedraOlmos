@@ -1,7 +1,7 @@
 package CódigoFuente_20677670_SaavedraOlmos.Clases_20677670_SaavedraOlmos;
 
+import CódigoFuente_20677670_SaavedraOlmos.Interfaces_20677670_SaavedraOlmos.InterfaceFlow_20677670_SaavedraOlmos;
 import java.util.*;
-import CódigoFuente_20677670_SaavedraOlmos.Clases_20677670_SaavedraOlmos.Option_20677670_SaavedraOlmos;
 
 public class Flow_20677670_SaavedraOlmos {
     private int id;

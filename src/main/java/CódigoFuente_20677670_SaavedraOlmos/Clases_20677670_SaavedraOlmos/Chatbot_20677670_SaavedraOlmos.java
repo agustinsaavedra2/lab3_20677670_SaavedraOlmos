@@ -1,6 +1,7 @@
 package CódigoFuente_20677670_SaavedraOlmos.Clases_20677670_SaavedraOlmos;
 
 import java.util.*;
+import CódigoFuente_20677670_SaavedraOlmos.Interfaces_20677670_SaavedraOlmos.InterfaceChatbot_20677670_SaavedraOlmos;
 
 public class Chatbot_20677670_SaavedraOlmos {
     private int chatbotID;
