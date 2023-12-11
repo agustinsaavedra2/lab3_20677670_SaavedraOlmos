@@ -9,6 +9,7 @@ public class Option_20677670_SaavedraOlmos {
     private int initialFlowCodeLink;
     private List<String> keywords;
 
+
     public Option_20677670_SaavedraOlmos(int code, String message, int chatbotCodeLink,
                                          int initialFlowCodeLink, List<String> keywords) {
         this.code = code;

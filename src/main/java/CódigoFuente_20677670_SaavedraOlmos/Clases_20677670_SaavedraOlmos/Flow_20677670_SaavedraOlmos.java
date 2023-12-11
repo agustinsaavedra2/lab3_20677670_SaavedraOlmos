@@ -12,7 +12,7 @@ public class Flow_20677670_SaavedraOlmos {
                                        List<Option_20677670_SaavedraOlmos> options) {
         this.id = id;
         this.msg = msg;
-        this.options = options;
+        this.options = Option_20677670_SaavedraOlmos.removeDuplicateOptions(options);
     }
 
     public int getId() {

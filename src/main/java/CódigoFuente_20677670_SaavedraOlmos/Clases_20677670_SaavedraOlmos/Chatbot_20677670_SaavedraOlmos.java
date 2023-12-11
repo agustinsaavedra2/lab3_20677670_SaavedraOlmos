@@ -15,7 +15,7 @@ public class Chatbot_20677670_SaavedraOlmos {
         this.name = name;
         this.welcomeMessage = welcomeMessage;
         this.startFlowID = startFlowID;
-        this.flows = flows;
+        this.flows = Flow_20677670_SaavedraOlmos.removeDuplicateFlows(flows);
     }
 
     public int getChatbotID() {
