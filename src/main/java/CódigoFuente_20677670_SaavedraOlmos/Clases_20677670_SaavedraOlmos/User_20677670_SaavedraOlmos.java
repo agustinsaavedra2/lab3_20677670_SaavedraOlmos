@@ -3,7 +3,8 @@ package CódigoFuente_20677670_SaavedraOlmos.Clases_20677670_SaavedraOlmos;
 import CódigoFuente_20677670_SaavedraOlmos.Interfaces_20677670_SaavedraOlmos.InterfaceUser_20677670_SaavedraOlmos;
 
 public class User_20677670_SaavedraOlmos implements InterfaceUser_20677670_SaavedraOlmos {
-    private String name;
+    private String nameUser;
+    private String userType;
 
     /**
      * Descripción: Constructor de la clase User
@@ -11,8 +12,9 @@ public class User_20677670_SaavedraOlmos implements InterfaceUser_20677670_Saave
      * @return User_20677670_SaavedraOlmos
      * @author: Agustín Saavedra
      */
-    public User_20677670_SaavedraOlmos(String name) {
-        this.name = name;
+    public User_20677670_SaavedraOlmos(String nameUser, String userType) {
+        this.nameUser = name;
+        this.userType = userType;
     }
 
     /**
@@ -22,7 +24,11 @@ public class User_20677670_SaavedraOlmos implements InterfaceUser_20677670_Saave
      * @author: Agustín Saavedra
      */
      
-    public String getName(){
-    	return name; 
+    public String getNameUser(){
+    	return nameUser; 
+    }
+    
+    public String getUserType(){
+    	return userType; 
     }
 }
