@@ -43,6 +43,10 @@ public class SystemChatbot_20677670_SaavedraOlmos implements InterfaceSystem_206
         this.systemUsers = systemUsers;
         this.loggedUser = loggedUser;
     }
+    
+    public String getName(){
+    	return name; 
+    }
 
     /**
      * Descripción: Modficador de sistema que añade un chatbot en base a su id (unicidad)
@@ -74,8 +78,8 @@ public class SystemChatbot_20677670_SaavedraOlmos implements InterfaceSystem_206
      */
     public void systemAddUser(User_20677670_SaavedraOlmos newUser){
     	
-    	if(!systemUsers.contains(newUser.getName())){
-    	    systemUsers.add(newUser.getName());
+    	if(!systemUsers.contains(newUser.getNameUser())){
+    	    systemUsers.add(newUser.getNameUser());
     	}
     }
 

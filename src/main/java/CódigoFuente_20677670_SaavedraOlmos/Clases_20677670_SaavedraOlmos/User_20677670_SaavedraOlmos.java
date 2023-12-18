@@ -13,7 +13,7 @@ public class User_20677670_SaavedraOlmos implements InterfaceUser_20677670_Saave
      * @author: Agustín Saavedra
      */
     public User_20677670_SaavedraOlmos(String nameUser, String userType) {
-        this.nameUser = name;
+        this.nameUser = nameUser;
         this.userType = userType;
     }
 
