@@ -1,0 +1,4 @@
+package CódigoFuente_20677670_SaavedraOlmos.Interfaces_20677670_SaavedraOlmos;
+
+public interface InterfaceMenu_20677670_SaavedraOlmos {
+}
