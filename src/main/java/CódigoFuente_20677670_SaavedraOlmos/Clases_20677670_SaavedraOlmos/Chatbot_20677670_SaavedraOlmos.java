@@ -39,6 +39,56 @@ public class Chatbot_20677670_SaavedraOlmos implements InterfaceChatbot_20677670
     public int getChatbotID() {
         return chatbotID;
     }
+    
+   /**
+     * Descripción: Selector del nombre de un chatbot
+     * @param No contiene parámetros de entrada
+     * @return String
+     * @author Agustín Saavedra
+     */
+    
+    public String getName(){
+    	return name; 
+    }
+    
+   /**
+     * Descripción: Selector del id del flujo inicial de un chatbot
+     * @param No contiene parámetros de entrada
+     * @return int
+     * @author Agustín Saavedra
+     */
+    
+    public int getStartFlowID(){
+    	return startFlowID;
+    }
+    
+   /**
+     * Descripción: Selector de los flujos de un chatbot
+     * @param No contiene parámetros de entrada
+     * @return List<Flow>
+     * @author Agustín Saavedra
+     */
+    
+    public List<Flow_20677670_SaavedraOlmos> getFlows(){
+    	return flows;
+    }
+    
+   /**
+     * Descripción: Método que obtiene un flujo en base a su ID
+     * @param idFlow ID del flujo que se va a buscar
+     * @return Flow
+     * @author Agustín Saavedra
+     */
+    
+    public Flow_20677670_SaavedraOlmos getFlowViaID(int idFlow){
+    	for(Flow_20677670_SaavedraOlmos fl: flows){
+    	    if(fl.getId() == idFlow){
+    	    	return fl;
+    	    }	
+    	}
+    	
+    	return null; 
+    }
 
     /**
      * Descripción: Modficador de chatbot que añade un flujo en base a su id (unicidad)
@@ -67,7 +117,9 @@ public class Chatbot_20677670_SaavedraOlmos implements InterfaceChatbot_20677670
      * @param flows Corresponde a una lista de chatbots en las que se verifica la unicidad de su código
      * @param chatbots
      * @return List<Chatbot_20677670_SaavedraOlmos>
+     * @author Agustín Saavedra
      */
+     
     public static List<Chatbot_20677670_SaavedraOlmos> removeDuplicateChatbots(List<Chatbot_20677670_SaavedraOlmos> chatbots){
     	List<Chatbot_20677670_SaavedraOlmos> listChatbots = new ArrayList<>();
     	List<Integer> idChatbots = new ArrayList<>();

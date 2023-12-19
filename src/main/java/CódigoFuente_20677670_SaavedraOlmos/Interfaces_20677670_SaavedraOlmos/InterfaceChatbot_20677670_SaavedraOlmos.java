@@ -6,6 +6,10 @@ import java.util.*;
 public interface InterfaceChatbot_20677670_SaavedraOlmos {
 
     public int getChatbotID();
+    public String getName();
+    public int getStartFlowID();
+    public List<Flow_20677670_SaavedraOlmos> getFlows();
+    public Flow_20677670_SaavedraOlmos getFlowViaID(int idFlow);
     public void chatbotAddFlow(Flow_20677670_SaavedraOlmos newFlow);
     public String toString();
     

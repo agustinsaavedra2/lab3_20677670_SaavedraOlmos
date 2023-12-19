@@ -40,7 +40,51 @@ public class Option_20677670_SaavedraOlmos implements InterfaceOption_20677670_S
     public int getCode() {
         return code;
     }
-
+    
+   /**
+     * Descripción: Selector de mensaje de una opción
+     * @param No contiene parámetros de entrada
+     * @return String
+     * @author Agustín Saavedra
+     */
+    
+    public String getMessage(){
+    	return message;
+    }
+    
+   /**
+     * Descripción: Selector de código de enlace del chatbot de una opción
+     * @param No contiene parámetros de entrada
+     * @return int 
+     * @author Agustín Saavedra
+     */
+    
+    public int getChatbotCodeLink(){
+    	return chatbotCodeLink;
+    }
+    
+   /**
+     * Descripción: Selector de código de enlace del flujo inicial de una opción
+     * @param No contiene parámetros de entrada
+     * @return int 
+     * @author Agustín Saavedra
+     */
+    
+    public int getInitialFlowCodeLink(){
+    	return initialFlowCodeLink;
+    }
+    
+   /**
+     * Descripción: Selector de las palabras claves de una opción
+     * @param No contiene parámetros de entrada
+     * @return List<String>
+     * @author Agustín Saavedra
+     */
+    
+    public List<String> getKeywords(){
+    	return keywords;
+    }
+    
     /**
      * Descripción: Método que elimina opciones duplicadas en base a su código
      * @param options

@@ -34,13 +34,53 @@ public class Flow_20677670_SaavedraOlmos implements InterfaceFlow_20677670_Saave
     public int getId() {
         return id;
     }
-
+    
+   /**
+     * Descripción: Selector del mensaje de un flujo
+     * @param No contiene parámetros de entrada
+     * @return String
+     * @author Agustín Saavedra
+     */
+    
+    public String getMsg(){
+    	return msg; 
+    }
+    
+   /**
+     * Descripción: Selector de todas las opciones de un flujo
+     * @param No contiene parámetros de entrada
+     * @return List<Option>
+     * @author Agustín Saavedra
+     */
+    
+    public List<Option_20677670_SaavedraOlmos> getOptions(){
+    	return options;
+    }
+    
+   /**
+     * Descripción: Método que entrega los mensajes de todas las opciones que están en un flujo
+     * @param No contiene parámetros de entrada
+     * @return String
+     * @author Agustín Saavedra
+     */
+    
+    public String getMsgOptions(){
+    	String msg = ""; 
+    	
+    	for(Option_20677670_SaavedraOlmos op: getOptions()){
+           msg = msg.concat(op.getMessage()).concat("\n");
+    	}
+    
+        return msg;
+    }
+    
     /**
      * Descripción: Modficador de flujo que añade una opción en base a su código (unicidad)
      * @param newOption
      * @return void
      * @author Agustín Saavedra
      */
+     
     public void flowAddOption(Option_20677670_SaavedraOlmos newOption) {
     	boolean optionExists = false; 
     	

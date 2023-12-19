@@ -77,5 +77,8 @@ public class Main {
     	
     	List<SystemChatbot_20677670_SaavedraOlmos> systems = new ArrayList<>();
     	systems.add(s0);
+    	
+    	Menu_20677670_SaavedraOlmos menu = new Menu_20677670_SaavedraOlmos();
+        menu.mainMenu(s0, systems);
     }
 }

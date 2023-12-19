@@ -6,6 +6,9 @@ import java.util.*;
 public interface InterfaceFlow_20677670_SaavedraOlmos {
     
     public int getId();
+    public String getMsg();
+    public List<Option_20677670_SaavedraOlmos> getOptions();
+    public String getMsgOptions();
     public void flowAddOption(Option_20677670_SaavedraOlmos newOption);
     public String toString();
 }
