@@ -7,9 +7,24 @@ import java.util.*;
 public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_SaavedraOlmos {
    private int op;
    
+   /**
+     * Descripción Constructor de clase Menu
+     * @param No posee parámetros de entrada
+     * @return Menu_20677670_SaavedraOlmos
+     * @author Agustín Saavedra
+     */
+   
    public Menu_20677670_SaavedraOlmos(){
     	this.op = 0; 
     }
+    
+   /**
+     * Descripción Método que muestra el menú principal
+     * @param system Sistema actual
+     * @param systems Lista de sistemas de chatbots
+     * @return void
+     * @author Agustín Saavedra
+     */
     
    public void mainMenu(SystemChatbot_20677670_SaavedraOlmos system, List<SystemChatbot_20677670_SaavedraOlmos> systems){
     	int opt; 
@@ -71,11 +86,26 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	
     }
     
+   /**
+     * Descripción Método que muestra los sistemas creados en el simulador de sistema de chatbots
+     * @param systems Lista de sistemas de chatbots
+     * @return void
+     * @author Agustín Saavedra
+     */
+    
    public void showSystemsMenu(List<SystemChatbot_20677670_SaavedraOlmos> systems){
     	 for(SystemChatbot_20677670_SaavedraOlmos sys: systems){
     	     System.out.println(sys); 	
          }
     }
+    
+   /**
+     * Descripción Método que muestra los sistemas creados en el simulador de sistema de chatbots
+     * @param sys Sistema actual 
+     * @param systems Lista de sistemas de chatbots
+     * @return void
+     * @author Agustín Saavedra
+     */
     
    public void showCurrentSystem(SystemChatbot_20677670_SaavedraOlmos sys, List<SystemChatbot_20677670_SaavedraOlmos> systems){
     	SystemChatbot_20677670_SaavedraOlmos currentSystem = menuSystemLogin(systems);
@@ -91,6 +121,13 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	  System.out.println(currentSystem.toString());	
     	}
     }
+    
+   /**
+     * Descripción Método en el que se hace el login de un usuario (sea normal o administrador)
+     * @param sys Sistema actual 
+     * @return void
+     * @author Agustín Saavedra
+     */
     
     public void menuLoginUser(SystemChatbot_20677670_SaavedraOlmos sys){
     	Scanner inp = new Scanner(System.in);
@@ -113,6 +150,14 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	   } 	
     	}
     }
+    
+   /**
+     * Descripción Método que muestra el menú de un usuario administrador
+     * @param sys Sistema actual
+     * @param sys nameUser Nombre del usuario logueado en el sistema 
+     * @return void
+     * @author Agustín Saavedra
+     */
     
     public void adminUserMenu(SystemChatbot_20677670_SaavedraOlmos sys, String nameUser){
     	Scanner inp = new Scanner(System.in);
@@ -159,6 +204,13 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	
     	} while(optFunc != 6);
     }
+    
+   /**
+     * Descripción Método en el que se crea una opción y posteriormente se añade a un flujo
+     * @param sys Sistema actual
+     * @return void
+     * @author Agustín Saavedra
+     */
     
     public void addOptionToFlow(SystemChatbot_20677670_SaavedraOlmos sys){
     	Scanner inp = new Scanner(System.in);
@@ -207,6 +259,13 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	
     }
     
+   /**
+     * Descripción Método en el que se crea un flujo y posteriormente se añade a un chatbot
+     * @param sys Sistema actual
+     * @return void
+     * @author Agustín Saavedra
+     */
+    
     public void addFlowToChatbot(SystemChatbot_20677670_SaavedraOlmos sys){
     	Scanner inp = new Scanner(System.in);
     	int idFlow, idChatbot; 
@@ -233,6 +292,13 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	
     	System.out.println("El flujo " + fl.toString() + "ha sido agregada al chatbot " + idChatbot + " con éxito");
     }
+    
+   /**
+     * Descripción Método en el que se crea un chatbot y posteriormente se añade a un sistema
+     * @param sys Sistema actual
+     * @return void
+     * @author Agustín Saavedra
+     */
     
     public void addChatbotToSystem(SystemChatbot_20677670_SaavedraOlmos sys){
     	Scanner inp = new Scanner(System.in);
@@ -262,6 +328,13 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	
     	System.out.println("El chatbot " + cbt.toString() + "ha sido agregado al sistema " + nameSystem + " con éxito");
     }
+    
+   /**
+     * Descripción Método en el que se muestra el menú systemTalk (para interactuar con un chatbot)
+     * @param sys Sistema actual
+     * @return void
+     * @author Agustín Saavedra
+     */
     
     public void systemTalkMenu(SystemChatbot_20677670_SaavedraOlmos sys){
     	Scanner inp = new Scanner(System.in);
@@ -295,6 +368,14 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	} while(opt != 2);
     }
     
+   /**
+     * Descripción Método que muestra el menú de un usuario normal
+     * @param sys Sistema actual
+     * @param sys nameUser Nombre del usuario logueado en el sistema 
+     * @return void
+     * @author Agustín Saavedra
+     */
+    
     public void normalUserMenu(SystemChatbot_20677670_SaavedraOlmos sys, String nameUser){
     	Scanner inp = new Scanner(System.in);
     	int optFunc;
@@ -327,6 +408,13 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	
     	} while(optFunc != 3);
     }
+    
+   /**
+     * Descripción Método que muestra el menú de registro de un usuario
+     * @param sys Sistema actual
+     * @return void
+     * @author Agustín Saavedra
+     */
     
     public void registerUserSystem(SystemChatbot_20677670_SaavedraOlmos sys){
     	Scanner inp = new Scanner(System.in);
@@ -378,6 +466,13 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
     	   	
      }
      
+    /**
+     * Descripción Método en el que un sistema es logueado
+     * @param systems Lista de sistemas de chatbots
+     * @return void
+     * @author Agustín Saavedra
+     */
+     
      public SystemChatbot_20677670_SaavedraOlmos menuSystemLogin(List<SystemChatbot_20677670_SaavedraOlmos> systems){
      	Scanner inp = new Scanner(System.in);
      	String nameSystem; 
@@ -393,6 +488,14 @@ public class Menu_20677670_SaavedraOlmos implements InterfaceMenu_20677670_Saave
      	
      	return null; 
      }
+     
+    /**
+     * Descripción Método en el que un sistema es creado
+     * @param systems Sistema actual
+     * @param systems Lista de sistemas de chatbots
+     * @return void
+     * @author Agustín Saavedra
+     */
      
      public void createSystem(SystemChatbot_20677670_SaavedraOlmos sys, List<SystemChatbot_20677670_SaavedraOlmos> systems){
      	Scanner inp = new Scanner(System.in);

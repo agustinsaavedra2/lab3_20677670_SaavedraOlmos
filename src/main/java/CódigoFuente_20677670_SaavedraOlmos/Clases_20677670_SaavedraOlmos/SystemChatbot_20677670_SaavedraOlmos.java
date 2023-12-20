@@ -48,14 +48,35 @@ public class SystemChatbot_20677670_SaavedraOlmos implements InterfaceSystem_206
         this.loggedUser = loggedUser;
         
     }
+    
+    /**
+     * Descripción: Selector del nombre de un sistema
+     * @param No contiene parámetros de entrada
+     * @return String
+     * @author Agustín Saavedra
+     */
     	   
     public String getName(){
     	return name; 
     }
     
+   /**
+     * Descripción: Selector de la lista de chatbots de un sistema
+     * @param No contiene parámetros de entrada
+     * @return List<Chatbot>
+     * @author Agustín Saavedra
+     */
+    	    
     public List<Chatbot_20677670_SaavedraOlmos> getChatbots(){
     	return chatbots; 
     }
+    
+   /**
+     * Descripción: Selector que obtiene un chatbot en base a su id
+     * @param idChatbot Corresponde al id del chatbot a encontrar
+     * @return List<Chatbot>
+     * @author Agustín Saavedra
+     */
     
     public Chatbot_20677670_SaavedraOlmos getChatbotViaID(int idChatbot){
     	for(Chatbot_20677670_SaavedraOlmos cbt: chatbots){
@@ -67,9 +88,23 @@ public class SystemChatbot_20677670_SaavedraOlmos implements InterfaceSystem_206
     	return null; 
     }
     
+   /**
+     * Descripción: Selector que obtiene la lista de usuarios del sistema
+     * @param No posee parámetros de entrada
+     * @return List<User>
+     * @author Agustín Saavedra
+     */
+    
     public List<User_20677670_SaavedraOlmos> getSystemUsers(){
     	return systemUsers; 
     }
+    
+   /**
+     * Descripción: Selector que obtiene la lista de nombres de los usuarios del sistema
+     * @param systemUsers Corresponde a los usuarios registrados en el sistema
+     * @return List<String>
+     * @author Agustín Saavedra
+     */
     
     public List<String> getNameSystemUsers(List<User_20677670_SaavedraOlmos> systemUsers){
     	List<String> nameUsers = new ArrayList<String>();
@@ -140,6 +175,13 @@ public class SystemChatbot_20677670_SaavedraOlmos implements InterfaceSystem_206
     	loggedUser.clear();
     }
     
+   /**
+     * Descripción: Método que permite interactuar con un chatbot
+     * @param msg Mensaje que se entrega al interactuar con el chatbot
+     * @return void
+     * @author Agustín Saavedra
+     */
+    
     public void systemTalk(String msg){
     	int idChatbot = -1000;
     	int idFlow = -1000;	
@@ -151,6 +193,15 @@ public class SystemChatbot_20677670_SaavedraOlmos implements InterfaceSystem_206
     	   conversationSystemTalk(msg, idChatbot, idFlow);	
     	}
     }
+    
+   /**
+     * Descripción: Método inicial para interactuar con un chatbot
+     * @param msg Mensaje que se entrega al interactuar con el chatbot
+     * @param idChatbot Corresponde al id del chatbot actual en la conversación
+     * @param idChatbot Corresponde al id del flow actual en la conversación
+     * @return void
+     * @author Agustín Saavedra
+     */
     
     public void initialSystemTalk(String msg, int idChatbot, int idFlow){
     	Chatbot_20677670_SaavedraOlmos cbt; 
@@ -171,6 +222,15 @@ public class SystemChatbot_20677670_SaavedraOlmos implements InterfaceSystem_206
     	idChatbot = cbt.getChatbotID();
     	idFlow = fl.getId();
     }
+    
+   /**
+     * Descripción: Método para seguir la conversación con un chatbot
+     * @param msg Mensaje que se entrega al interactuar con el chatbot
+     * @param idChatbot Corresponde al id del chatbot actual en la conversación
+     * @param idChatbot Corresponde al id del flow actual en la conversación
+     * @return void
+     * @author Agustín Saavedra
+     */
     
     public void conversationSystemTalk(String msg, int idChatbot, int idFlow){
     	Chatbot_20677670_SaavedraOlmos cbt; 
@@ -199,6 +259,13 @@ public class SystemChatbot_20677670_SaavedraOlmos implements InterfaceSystem_206
     	   }	
     	}
     }
+    
+   /**
+     * Descripción: Método que hace síntesis del chatbot de un usuario en base a su chatHistory dentro del sistema
+     * @param userName Nombre de usuario logueado en el sistema
+     * @return void
+     * @author Agustín Saavedra
+     */
     
     public void systemSynthesis(String userName){
     	String dialogues = "";
